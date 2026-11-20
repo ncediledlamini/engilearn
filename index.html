@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EngiLearn | Engineering Mathematics</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+    window.MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    };
+    </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigation sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">E</span>
+            <h2>EngiLearn</h2>
+        </div>
+
+        <p class="menu-label">CONCEPT LIBRARY</p>
+
+        <nav>
+            <a href="#" class="nav-link active">Dashboard</a>
+            <a href="#topics" class="nav-link">My Courses</a>
+            <a href="#practice" class="nav-link">Practice</a>
+            <a href="#graph" class="nav-link">Graphing</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Learn smarter.</p>
+            <p>Understand deeper.</p>
+        </div>
+
+    </aside>
+
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome">YOUR LEARNING SPACE</p>
+                <h1>Engineering Mathematics</h1>
+            </div>
+
+            <div class="student-badge">EL</div>
+        </header>
+
+
+        <!-- Welcome section -->
+        <section class="hero">
+
+            <div>
+                <p class="hero-tag">WELCOME TO ENGILEARN</p>
+
+                <h2>Understand the concepts.<br>
+                    Master the mathematics.</h2>
+
+                <p class="hero-description">
+                    Your journey towards understanding
+                    engineering mathematics starts here.
+                </p>
+
+                <a href="#topics" class="hero-button">
+                    Explore topics →
+                </a>
+            </div>
+
+            <div class="hero-decoration">∫</div>
+
+        </section>
+
+
+        <!-- DEDICATED GRAPHING SECTION (Hidden until Graphing tab is clicked) -->
+        <section id="graph" class="graph-section" hidden>
+            <div class="section-heading">
+                <div>
+                    <h2>Interactive Graphing Lab</h2>
+                    <p>Switch between Cartesian, Trigonometric, Polar, and Complex Argand axes in real time.</p>
+                </div>
+            </div>
+
+            <!-- Universal Multi-Axis Visualizer mounted automatically by graphs.js -->
+            <div class="graph-widget" data-graph="universal-lab"></div>
+        </section>
+
+
+        <!-- Progress section -->
+        <section class="progress-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Your learning overview</h2>
+                    <p>Keep track of your learning journey.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Available topics</p>
+                    <h3>06</h3>
+                    <span>Explore and learn</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Topics completed</p>
+                    <h3 id="completed-count">00</h3>
+                    <span>Your progress</span>
+                </div>
+
+                <div id="practice-stat-card"
+                    class="stat-card practice-stat-card"
+                    title="Jump to Practice Quiz"
+                    role="button"
+                    tabindex="0">
+                    <p>Practice questions</p>
+                    <h3 id="practice-stat-value">16</h3>
+                    <span id="practice-stat-sub">Best score: Not attempted</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Topics section -->
+        <section id="topics" class="topics-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Explore mathematics</h2>
+                    <p>Select a topic to begin learning.</p>
+                </div>
+            </div>
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for a topic..."
+                class="search-input"
+            >
+
+            <div class="topics-grid" id="topics-container">
+
+                <!-- 01. Algebra I: Parabola -->
+                <article class="topic-card"
+                    data-name="Algebra">
+
+                    <span class="topic-number">01</span>
+                    <div class="topic-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 17h18M12 3v18" stroke-opacity="0.35"/>
+                            <path d="M5 5Q12 25 19 5"/>
+                        </svg>
+                    </div>
+                    <h3>Algebra I</h3>
+                    <p>Equations, functions and algebraic expressions.</p>
+                    <button class="explore-button"
+                        data-topic="Algebra">
+                        Explore topic →
+                    </button>
+
+                </article>
+
+
+                <!-- 02. Calculus I: Integral Curve -->
+                <article class="topic-card"
+                    data-name="Calculus">
+
+                    <span class="topic-number">02</span>
+                    <div class="topic-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 19V14C11 14 13 7 17 7V19Z" fill="currentColor" fill-opacity="0.18" stroke="none"/>
+                            <path d="M3 19h18M5 3v18" stroke-opacity="0.35"/>
+                            <path d="M8 19V14M17 19V7" stroke-opacity="0.65"/>
+                            <path d="M5 14.5C7 14.5 7.5 14 8 14C11 14 13 7 17 7C18.5 7 19.5 6.8 20.5 6.5"/>
+                        </svg>
+                    </div>
+                    <h3>Calculus I</h3>
+                    <p>Limits, differentiation and integration.</p>
+                    <button class="explore-button"
+                        data-topic="Calculus">
+                        Explore topic →
+                    </button>
+
+                </article>
+
+
+                <!-- 03. Calculus II: 3D Surface -->
+                <article class="topic-card"
+                    data-name="Calculus II">
+
+                    <span class="topic-number">03</span>
+                    <div class="topic-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 7Q12 3 18 7L21 17Q12 21 3 17Z" fill="currentColor" fill-opacity="0.12" stroke="none"/>
+                            <path d="M6 7Q12 3 18 7"/>
+                            <path d="M4.5 12h15" stroke-opacity="0.65"/>
+                            <path d="M3 17Q12 21 21 17"/>
+                            <path d="M6 7L3 17M18 7L21 17"/>
+                            <path d="M12 5v14" stroke-opacity="0.65"/>
+                        </svg>
+                    </div>
+                    <h3>Calculus II</h3>
+                    <p>First-order and higher-order differential equations.</p>
+                    <button class="explore-button"
+                        data-topic="Calculus II">
+                        Explore topic →
+                    </button>
+
+                </article>
+
+
+                <!-- 04. Algebra II: Matrix -->
+                <article class="topic-card"
+                    data-name="Algebra II">
+
+                    <span class="topic-number">04</span>
+                    <div class="topic-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 4H4v16h3"/>
+                            <path d="M17 4h3v16h-3"/>
+                            <circle cx="9.5" cy="9" r="1.25" fill="currentColor" stroke="none"/>
+                            <circle cx="14.5" cy="9" r="1.25" fill="currentColor" stroke="none"/>
+                            <circle cx="9.5" cy="15" r="1.25" fill="currentColor" stroke="none"/>
+                            <circle cx="14.5" cy="15" r="1.25" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3>Algebra II</h3>
+                    <p>Matrices, vectors and systems of equations.</p>
+                    <button class="explore-button"
+                        data-topic="Algebra II">
+                        Explore topic →
+                    </button>
+
+                </article>
+
+
+                <!-- 05. Statistics I: Histogram -->
+                <article class="topic-card"
+                    data-name="Statistics I">
+
+                    <span class="topic-number">05</span>
+                    <div class="topic-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"/>
+                            <rect x="5" y="14" width="3.5" height="7"/>
+                            <rect x="8.5" y="9" width="3.5" height="12"/>
+                            <rect x="12" y="6" width="3.5" height="15"/>
+                            <rect x="15.5" y="11" width="3.5" height="10"/>
+                        </svg>
+                    </div>
+                    <h3>Statistics I</h3>
+                    <p>Descriptive statistics, probability theory and distributions.</p>
+                    <button class="explore-button"
+                        data-topic="Statistics I">
+                        Explore topic →
+                    </button>
+
+                </article>
+
+
+                <!-- 06. Financial Mathematics: Stack of Money -->
+                <article class="topic-card"
+                    data-name="Financial Mathematics">
+
+                    <span class="topic-number">06</span>
+                    <div class="topic-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="5" width="20" height="11" rx="2"/>
+                            <circle cx="12" cy="10.5" r="2.25"/>
+                            <path d="M6 10.5h.01M18 10.5h.01"/>
+                            <path d="M4 19h16"/>
+                            <path d="M6 22h12"/>
+                        </svg>
+                    </div>
+                    <h3>Financial Mathematics</h3>
+                    <p>Applied mathematics, annuities and profits.</p>
+                    <button class="explore-button"
+                        data-topic="Financial Mathematics">
+                        Explore topic →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- LESSON ENVIRONMENT -->
+        <section id="lesson-view" class="lesson-view" hidden>
+
+            <button id="back-to-topics" class="back-button">
+                ← Back to mathematics topics
+            </button>
+
+            <!-- Subtopic selector pills will render here -->
+            <div id="subtopic-nav" class="subtopic-nav" aria-label="Topic lessons"></div>
+
+            <div class="lesson-header">
+
+                <p id="lesson-category" class="welcome">
+                    ENGINEERING MATHEMATICS
+                </p>
+
+                <h2 id="lesson-title">Lesson title</h2>
+
+                <p id="lesson-description">
+                    Lesson description
+                </p>
+
+            </div>
+
+
+            <div id="lesson-content" class="lesson-content">
+                <!-- Lesson material will be inserted here -->
+            </div>
+
+
+            <div class="completion-panel">
+
+                <h3>Finished this lesson?</h3>
+
+                <p>Mark this subtopic as completed to track your progress, or test your skills.</p>
+
+                <div class="completion-actions">
+                    <button id="complete-lesson" class="complete-button">
+                        Mark lesson as completed
+                    </button>
+
+                    <div class="lesson-nav-buttons">
+                        <button id="open-topic-quiz" class="nav-lesson-btn" type="button" hidden>
+                            Practice Quiz ✎
+                        </button>
+                        <button id="prev-lesson" class="nav-lesson-btn" type="button">
+                            ← Previous
+                        </button>
+                        <button id="next-lesson" class="nav-lesson-btn" type="button">
+                            Next →
+                        </button>
+                    </div>
+                </div>
+
+                <p id="lesson-status" aria-live="polite"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRACTICE QUIZ SECTION -->
+        <section id="practice" class="practice-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Practice & Self-Assessment</h2>
+                    <p>Test your understanding with step-by-step worked solutions.</p>
+                </div>
+            </div>
+
+            <!-- Topic selector -->
+            <div id="quiz-topic-tabs" class="quiz-topic-tabs"></div>
+
+            <!-- Subtopic / Lesson filter -->
+            <div id="quiz-lesson-filters" class="quiz-lesson-filters"></div>
+
+            <!-- Active Quiz Card -->
+            <div id="quiz-card" class="quiz-card">
+                <div class="quiz-topbar">
+                    <span id="quiz-progress-label" class="quiz-badge">Question 1 of 12</span>
+                    <span id="quiz-lesson-tag" class="quiz-tag">Lesson 1: Polynomials</span>
+                    <span id="quiz-score-label" class="quiz-score">Score: 0 / 0</span>
+                </div>
+
+                <div class="quiz-progress-bar">
+                    <div id="quiz-progress-fill" class="quiz-progress-fill"></div>
+                </div>
+
+                <div id="quiz-question-text" class="quiz-question"></div>
+
+                <div id="quiz-options" class="quiz-options"></div>
+
+                <div id="quiz-feedback" class="quiz-feedback" hidden>
+                    <p id="quiz-feedback-title" class="quiz-feedback-title"></p>
+                    <div id="quiz-explanation" class="quiz-explanation"></div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="quiz-prev-btn" class="nav-lesson-btn" type="button">
+                        ← Previous
+                    </button>
+                    <button id="quiz-restart-btn" class="nav-lesson-btn" type="button">
+                        Restart Quiz
+                    </button>
+                    <button id="quiz-next-btn" class="complete-button" type="button">
+                        Next Question →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Results Summary -->
+            <div id="quiz-summary" class="quiz-summary" hidden>
+                <p class="welcome">QUIZ COMPLETED</p>
+                <h3 id="quiz-final-score">You scored 0 / 12 (0%)</h3>
+                <p id="quiz-final-message">Keep practicing to master every engineering concept.</p>
+                <div class="quiz-summary-actions">
+                    <button id="quiz-review-btn" class="nav-lesson-btn" type="button">
+                        Review Answers
+                    </button>
+                    <button id="quiz-retake-btn" class="complete-button" type="button">
+                        Retake Quiz ↻
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>EngiLearn © 2026 | Learn smarter. Understand deeper.</p>
+        </footer>
+
+    </main>
+
+    <script src="algebra.js"></script>
+    <script src="calculus.js"></script>
+    <script src="lessons.js"></script>
+    <script src="quizzes.js"></script>
+    <script src="graphs.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
